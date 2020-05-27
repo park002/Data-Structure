@@ -10,8 +10,13 @@ public class Q7 {
 		int n = sc.nextInt();
 		int sum = 0;
 		for (int i = 1; i <= n; i++) {
+			if (i < n)
+				System.out.print(i + "+");
+			else
+				System.out.print(n);
 			sum += i;
 		}
-		System.out.println(sum);
+		System.out.print("=" + sum);
+
 	}
 }
