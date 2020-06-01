@@ -25,25 +25,26 @@ public class Q15 {
 
 	static void triangleRU(int n) { // 오른쪽 위가 직각인 이등변 삼각형을 출력합니다
 		for (int i = 1; i <= n; i++) {
-			for (int j = i; j <= n; j++) {
-				System.out.print("*");
+			for (int j = 1; j <= n; j++) {
+				if (i > j)
+					System.out.print("  ");
+				else
+					System.out.print("*");
 			}
 			System.out.println();
-
 		}
 	}
 
 	static void triangleRB(int n) { // 오른쪽 아래가 직각인 이등변 삼각형을 출력합니다
 		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= 5; j++) {
+			for (int j = n; 1 <= j; j--) {
 				if (j > i) {
-					System.out.print(" ");
+					System.out.print("  ");
 				} else {
 					System.out.print("*");
 				}
 			}
 			System.out.println();
-
 		}
 	}
 

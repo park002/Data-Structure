@@ -15,9 +15,9 @@ public class Q11 {
 			n = sc.nextInt();
 		} while (n <= 0);
 
-		while (n > 0) { // 100 10
-			n /= 10;// 10 1 0
-			count++;// 1 2 3
+		while (n > 0) { 
+			n /= 10;
+			count++;
 		}
 		System.out.printf("그 수는 %d자리 입니다", count);
 
