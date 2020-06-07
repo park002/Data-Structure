@@ -11,6 +11,7 @@ public class DayOfYear2 {
 	}
 
 	static int day(int y, int m, int d) {
+
 		int days = year[isLeap(y)][m - 1] - d;
 		for (int i = m; i < 12; i++) { // 2
 			days = days + year[isLeap(y)][i];
