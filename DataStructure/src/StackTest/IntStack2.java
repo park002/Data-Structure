@@ -14,6 +14,7 @@ public class IntStack2 {
 			if (menu == 0)
 				break;
 			int x;
+			
 			switch (menu) {
 			case 1:
 				System.out.print("데이터 : ");
@@ -41,6 +42,7 @@ public class IntStack2 {
 					x = s.peek();
 					System.out.println("피크한 데이터는 : " + x + "입니다");
 				} catch (IntStack.EmptyIntStackException e) {
+					
 					System.out.println("스택이 비어 있습니다.");
 					// TODO: handle exception
 				}
