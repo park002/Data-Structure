@@ -7,32 +7,36 @@ public class BubbleSort3 {
 		int temp = a[index1];
 		a[index1] = a[index2];
 		a[index2] = temp;
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.println();
+
 	}
 
-	static void bubble(int[] a, int x) {
-		for (int i = 0; i < x - 1; i++) {
-			for (int j = 0; j < x - i - 1; j++) {
-				if (a[j] > a[j + 1])
-					swap(a, j, j + 1);
-			}
+	static void selectSort(int[] a, int n) {
+		for (int i = 0; i < n - 1; i++) {
+			int min = i;
+			for (int j = i + 1; j < n; j++)
+				if (a[j] < a[min]) {
+					min = j;
+				}
+			swap(a, i, min);
 		}
 	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("배열의 요솟 수 : ");
+		System.out.println("요솟 수 :");
 		int x = sc.nextInt();
 		int[] a = new int[x];
-
 		for (int i = 0; i < a.length; i++) {
-			a[i] = (int) (Math.random() * 10) + 1; // 1~10까지
-			System.out.print(a[i] + " ");
+			System.out.print("a[" + i + "] =");
+			a[i] = sc.nextInt();
 		}
-		bubble(a, x);
-		System.out.println();
-
+		selectSort(a, x);
 		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
+			System.out.print(a[i]);
 		}
 	}
 }
